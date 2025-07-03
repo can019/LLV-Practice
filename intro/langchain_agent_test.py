@@ -7,7 +7,7 @@ import os
 from dotenv import load_dotenv
 
 # ✅ .env 파일을 찾아서 환경변수를 불러옴 (예: OPENAI_API_KEY)
-load_dotenv()
+load_dotenv("../")
 
 # ✅ LangChain OpenAI LLM 클래스 최신 공식 import 방법
 # (langchain 0.1 이후부터는 별도 패키지에서 가져와야 함)
@@ -21,7 +21,7 @@ llm = OpenAI(
 )
 
 # ✅ LLM에 프롬프트(질문) 입력하여 답변받기
-response = llm("")
+response = llm("대한민국의 수도는")
 
 # ✅ 응답 출력
 print(response)
